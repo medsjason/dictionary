@@ -3,7 +3,7 @@ const search_btn = document.getElementById("search_btn")
 const apiKey = "9d0f6f47-1dc0-4b68-854c-d85b80d64594";
 const not_found = document.querySelector('.not_found')
 const definition_box1 = document.querySelector('.def')
-const definition_box2 = document.querySelector('show2')
+// const definition_box2 = document.querySelector('show2')
 const audio_box = document.querySelector('.audio')
 
 search_btn.addEventListener('click', e => {
@@ -51,8 +51,8 @@ async function dataGet(word){
     let definition3 = data[0].shortdef[2];
     definition_box1.innerHTML = definition1 + " " + definition2 + " " + definition3;
 
-    let show_2 = data[0].shortdef[0];
-    definition_box2.innerHTML = show_2;
+    // let show_2 = data[0].shortdef[0];
+    // definition_box2.innerHTML = show_2;
 
     let sound_name = data[0].hwi.prs[0].sound.audio;
     if (sound_name){
